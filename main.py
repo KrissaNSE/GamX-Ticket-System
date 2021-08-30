@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 import json
 import asyncio
+import os
 
 bot = commands.Bot(command_prefix=".")
 bot.remove_command("help")
@@ -403,4 +404,4 @@ async def deladminrole(ctx, role_id=None):
         em = discord.Embed(title="GamXGaming", description="That isn't a valid role ID. Please try again with a valid role ID.")
         await ctx.send(embed=em)
 
-bot.run('ODU3MjQ4ODk3MzE0NzE3NzM3.YNM1QA.9HVzyrHdmc6-Hn9iCjB1nW3HQDk')
+bot.run(os.environ['TOKEN'])
